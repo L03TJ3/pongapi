@@ -17,7 +17,7 @@ const app = feathers()
   // Turn on URL-encoded parser for REST services
   .use(bodyParser.urlencoded({extended: true}));
 
-const mongo_url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/rockpaperscissors';
+const mongo_url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/ponggame';
 
   // Connect to your MongoDB instance(s)
 MongoClient.connect(mongo_url).then(function(db){
