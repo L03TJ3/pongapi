@@ -29,6 +29,14 @@ MongoClient.connect(mongo_url).then(function(db){
       max: 50
     }
   }));
+
+  app.use('/ponggames', service({
+    Model: db.collection('ponggames'),
+    paginate: {
+      default: 30,
+      max: 50
+    }
+  }));
   // A basic error handler, just like Express
   // app.use(errors.handler());
 
